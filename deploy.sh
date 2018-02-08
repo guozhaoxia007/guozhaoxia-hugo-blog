@@ -18,7 +18,7 @@ if [ $# -eq 1 ]
       git commit -m "$msg"
 
       # Push source and build repos.
-      git push origin master -f
+      git push origin master
 
       # Come Back
       cd ..
