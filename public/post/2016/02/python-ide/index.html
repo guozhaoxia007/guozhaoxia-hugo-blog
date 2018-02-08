@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>python IDE</title>
+
+  
+  
+
+
+
+
+
+  
+  <meta name="author" content="Zhaoxia Guo" />
+  <meta name="description" content="VIM 1. 参考链接： https://github.com/yangyangwithgnu/use_vim_as_ide https://github.com/spf13/spf13-vim
+2. install sudo pip install pyflakes
+sudo pip install pylint
+sudo pip install pep8
+或者使用这个vim插件
+https://github.com/scrooloose/syntastic
+3. 我的vimrc call pathogen#infect() syntax enable syntax on set background=dark set number set tabstop=4 set softtabstop=4 set shiftwidth=4 set expandtab set laststatus=2 set ruler &amp;quot; set cursorcolumn &amp;quot; 突出显示当前列 set cursorline &amp;quot; 突出显示当前行 set hlsearch set incsearch set ignorecase set autoindent set nowrap set showcmd &amp;quot; 显示输入命令 let g:solarized_termcolors=16 colorscheme solarized set textwidth=79 autocmd FileType text setlocal textwidth=78 &amp;quot; 一旦一行的字符超出79个的话就把那些字符的背景设为红色 highlight OverLength ctermbg=red ctermfg=white guibg=#592929 match OverLength /\%80v." />
+
+  
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@gohugoio" />
+    <meta name="twitter:title" content="python IDE" />
+    <meta name="twitter:description" content="VIM 1. 参考链接： https://github.com/yangyangwithgnu/use_vim_as_ide https://github.com/spf13/spf13-vim
+2. install sudo pip install pyflakes
+sudo pip install pylint
+sudo pip install pep8
+或者使用这个vim插件
+https://github.com/scrooloose/syntastic
+3. 我的vimrc call pathogen#infect() syntax enable syntax on set background=dark set number set tabstop=4 set softtabstop=4 set shiftwidth=4 set expandtab set laststatus=2 set ruler &amp;quot; set cursorcolumn &amp;quot; 突出显示当前列 set cursorline &amp;quot; 突出显示当前行 set hlsearch set incsearch set ignorecase set autoindent set nowrap set showcmd &amp;quot; 显示输入命令 let g:solarized_termcolors=16 colorscheme solarized set textwidth=79 autocmd FileType text setlocal textwidth=78 &amp;quot; 一旦一行的字符超出79个的话就把那些字符的背景设为红色 highlight OverLength ctermbg=red ctermfg=white guibg=#592929 match OverLength /\%80v." />
+    <meta name="twitter:image" content="http://guozhaoxia007.github.io/img/avatar.jpg" />
+  
+
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="python IDE" />
+  <meta property="og:description" content="VIM 1. 参考链接： https://github.com/yangyangwithgnu/use_vim_as_ide https://github.com/spf13/spf13-vim
+2. install sudo pip install pyflakes
+sudo pip install pylint
+sudo pip install pep8
+或者使用这个vim插件
+https://github.com/scrooloose/syntastic
+3. 我的vimrc call pathogen#infect() syntax enable syntax on set background=dark set number set tabstop=4 set softtabstop=4 set shiftwidth=4 set expandtab set laststatus=2 set ruler &amp;quot; set cursorcolumn &amp;quot; 突出显示当前列 set cursorline &amp;quot; 突出显示当前行 set hlsearch set incsearch set ignorecase set autoindent set nowrap set showcmd &amp;quot; 显示输入命令 let g:solarized_termcolors=16 colorscheme solarized set textwidth=79 autocmd FileType text setlocal textwidth=78 &amp;quot; 一旦一行的字符超出79个的话就把那些字符的背景设为红色 highlight OverLength ctermbg=red ctermfg=white guibg=#592929 match OverLength /\%80v." />
+  <meta property="og:url" content="http://guozhaoxia007.github.io/post/2016/02/python-ide/" />
+  <meta property="og:image" content="http://guozhaoxia007.github.io/img/avatar.jpg" />
+
+
+
+
+<meta name="generator" content="Hugo 0.36" />
+
+
+<link rel="canonical" href="http://guozhaoxia007.github.io/post/2016/02/python-ide/" />
+<link rel="alternative" href="http://guozhaoxia007.github.io/index.xml" title="喵大人的博客" type="application/atom+xml" />
+
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+<meta name="google-site-verification" content="_moDmnnBNVLBN1rzNxyGUGdPHE20YgbmrtzLIbxaWFc" />
+<meta name="msvalidate.01" content="22596E34341DD1D17D6022C44647E587" />
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="喵大人的博客" />
+<meta name="msapplication-tooltip" content="喵大人的博客" />
+<meta name='msapplication-navbutton-color' content="#5fbf5e" />
+<meta name="msapplication-TileColor" content="#5fbf5e" />
+<meta name="msapplication-TileImage" content="/img/tile-image-windows.png" />
+<link rel="icon" href="http://guozhaoxia007.github.io/img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="http://guozhaoxia007.github.io/img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="http://guozhaoxia007.github.io/img/favicon-32x32.png" />
+<link rel="icon" sizes="192x192" href="http://guozhaoxia007.github.io/img/touch-icon-android.png" />
+<link rel="apple-touch-icon" href="http://guozhaoxia007.github.io/img/touch-icon-apple.png" />
+<link rel="mask-icon" href="http://guozhaoxia007.github.io/img/safari-pinned-tab.svg" color="#5fbf5e" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="http://guozhaoxia007.github.io/css/bundle.css" />
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="img/avatar.jpeg" alt="Avatar">
+  
+  <h2 class="title">喵大人的博客</h2>
+  
+  <p class="subtitle">~ ~ ~</p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="http://guozhaoxia007.github.io/">首页</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="https://github.com/guozhaoxia007">GitHub</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="http://guozhaoxia007.github.io/tags/">标签</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="http://guozhaoxia007.github.io/about/">关于</a>
+          </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list">
+
+      
+      <li class="social-item">
+        <a href="mailto:guozhaoxia123@gmail.com" title="Email"><span class="icon icon-email"></span></a>
+      </li>
+
+      
+      <li class="social-item">
+        <a href="//github.com/guozhaoxia007" title="GitHub"><span class="icon icon-github"></span></a>
+      </li>
+
+      <li class="social-item">
+        <a href="//twitter.com/" title="Twitter"><span class="icon icon-twitter"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a href="//weibo.com/" title="Weibo"><span class="icon icon-weibo"></span></a>
+      </li>
+
+      <li class="social-item">
+        <a href="" title="Wechat"><span class="icon icon-wechat"></span></a>
+      </li>
+
+      <li class="social-item">
+        <a href="//www.linkedin.com/in/" title="Linkedin"><span class="icon icon-linkedin"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a href="http://guozhaoxia007.github.io/index.xml"><span class="icon icon-rss" title="RSS"></span></a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">python IDE</h1>
+      <p class="post-meta">@Zhaoxia Guo · Feb 22, 2016 · 2 min read</p>
+    </header>
+    <article class="post-content">
+
+<h2 id="vim">VIM</h2>
+
+<h4 id="1-参考链接">1. 参考链接：</h4>
+
+<p><a href="https://github.com/yangyangwithgnu/use_vim_as_ide">https://github.com/yangyangwithgnu/use_vim_as_ide</a>
+<a href="https://github.com/spf13/spf13-vim">https://github.com/spf13/spf13-vim</a></p>
+
+<h4 id="2-install">2. install</h4>
+
+<p>sudo pip install pyflakes</p>
+
+<p>sudo pip install pylint</p>
+
+<p>sudo pip install pep8</p>
+
+<p>或者使用这个vim插件</p>
+
+<p><a href="https://github.com/scrooloose/syntastic">https://github.com/scrooloose/syntastic</a></p>
+
+<h4 id="3-我的vimrc">3. 我的vimrc</h4>
+
+<pre><code>call pathogen#infect()
+
+syntax enable
+syntax on
+set background=dark
+set number
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set laststatus=2
+set ruler
+&quot; set cursorcolumn &quot; 突出显示当前列
+set cursorline &quot; 突出显示当前行
+set hlsearch
+set incsearch
+set ignorecase
+set autoindent
+set nowrap
+set showcmd       &quot; 显示输入命令
+let g:solarized_termcolors=16
+colorscheme solarized
+set textwidth=79
+autocmd FileType text setlocal textwidth=78
+&quot; 一旦一行的字符超出79个的话就把那些字符的背景设为红色
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%80v.\+/
+
+filetype on &quot; 检测文件类型
+filetype indent on &quot; 针对不同的文件类型采用不同的缩进格式
+filetype plugin on &quot; 允许插件
+filetype plugin indent on &quot; 启动自动补全
+
+set autoread &quot; 文件修改之后自动载入
+set shortmess=atI &quot; 启动的时候不显示那个援助索马里儿童的提示
+set scrolloff=7 &quot; 在上下移动光标时，光标的上方或下方至少会保留显示的行数
+set ffs=unix,dos,mac &quot; Use Unix as the standard file type
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_enable_highlighting=1
+let g:syntastic_python_checkers=['pep8'] &quot; pyflakes, pylint, pep8
+let g:syntastic_python_pylint_args='--disable=C0111'
+</code></pre>
+
+<h2 id="pycharm">PyCharm</h2>
+
+<h4 id="参考链接">参考链接</h4>
+
+<p><a href="http://blog.csdn.net/u013088062/article/details/50100121">http://blog.csdn.net/u013088062/article/details/50100121</a></p>
+
+<h4 id="操作步骤">操作步骤</h4>
+
+<ol>
+<li><p>在Settings/Preferences对话框中的Inspections页面，键入PEP8来找到所有相关选项，在对应的下拉菜单中选中warning选项；在Ignore erros中添加可忽略警告，C0111</p></li>
+
+<li><p>在Settings/Preferences对话框中的Auto Import中选择Python下的Show import popup</p></li>
+
+<li><p>在Settings/Preferences对话框中的 File Encoding中IDE Encoding和Project Encoding都使用UTF-8</p></li>
+</ol>
+
+<h4 id="我的settings文件">我的Settings文件</h4>
+
+<p><a href="https://github.com/guozhaoxia007/guozhaoxia-hugo-blog/tree/master/content/post/2016/02">settings.jar</a></p>
+
+<h2 id="sublime-text-2">Sublime Text 2</h2>
+
+<h4 id="参考链接-1">参考链接</h4>
+
+<h4 id="操作步骤-1">操作步骤</h4>
+
+<ol>
+<li><p>Ctrl+Shift+p打开命令面板输入install，就可以看到安装列表</p></li>
+
+<li><p>安装以下插件：sublime linter, pylinter 或 python flake8 lint</p></li>
+</ol>
+
+<h4 id="我的settings文件-1">我的Settings文件</h4>
+
+<pre><code>{
+    &quot;auto_indent&quot;: true,
+    &quot;color_scheme&quot;: &quot;Packages/Color Scheme - Default/Twilight.tmTheme&quot;,
+    &quot;default_line_ending&quot;: &quot;unix&quot;,
+    &quot;detect_indentation&quot;: true,
+    &quot;font_size&quot;: 15.0,
+    &quot;ignored_packages&quot;:
+    [
+        &quot;Vintage&quot;
+    ],
+    &quot;indent_to_bracket&quot;: false,
+    &quot;smart_indent&quot;: true,
+    &quot;tab_size&quot;: 4,
+    &quot;translate_tabs_to_spaces&quot;: true,
+    &quot;trim_automatic_white_space&quot;: true,
+    &quot;use_tab_stops&quot;: true
+}
+</code></pre>
+</article>
+    <footer class="post-footer">
+      
+      <p class="post-copyright">
+        This post was published <strong>717</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  <footer class="site-footer">
+  <p>© 2017-2018 喵大人的博客</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+<script src="http://guozhaoxia007.github.io/js/bundle.js"></script>
+
+
+
+
+  </body>
+</html>
