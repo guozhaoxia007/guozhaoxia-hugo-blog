@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pytz on 喵大人的博客</title>
+    <link>http://guozhaoxia007.github.io/categories/pytz/</link>
+    <description>Recent content in Pytz on 喵大人的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 20 Feb 2016 23:18:34 +0800</lastBuildDate>
+    
+	<atom:link href="http://guozhaoxia007.github.io/categories/pytz/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pytz</title>
+      <link>http://guozhaoxia007.github.io/post/2016/02/pytz/</link>
+      <pubDate>Sat, 20 Feb 2016 23:18:34 +0800</pubDate>
+      
+      <guid>http://guozhaoxia007.github.io/post/2016/02/pytz/</guid>
+      <description>pytz使用 使用场景  查询，如果前端输入start_time, end_time，后台计算月报（每天开始结束时间）和年报（每月开始结束时间） 定时任务，统计前一天的数据，即知道年月日，后台计算start_time, end_time  实验1，夏令时和冬令时 # 美东、中国标准、印度标准、印尼西部 [&#39;UTC&#39;, &#39;US/Eastern&#39;, &#39;Asia/Shanghai&#39;, &#39;Asia/Kolkata&#39;, &#39;Asia/Jakarta&#39;] fmt = &#39;%Y-%m-%d %H:%M:%S %Z%z&#39; for tz in timezones: p_tz = timezone(tz) loc_dt = p_tz.localize(datetime(2015,4,1,8,0,0)) print loc_dt.strftime(fmt) 2015-04-01 08:00:00 EDT-0400 2015-04-01 08:00:00 CST+0800 2015-04-01 08:00:00 IST+0530 2015-04-01 08:00:00 WIB+0700 for tz in timezones: p_tz = timezone(tz) loc_dt = p_tz.localize(datetime(2015,12,1,8,0,0)) print loc_dt.strftime(fmt) 2015-12-01 08:00:00 EST-0500 2015-12-01 08:00:00 CST+0800 2015-12-01 08:00:00 IST+0530 2015-12-01 08:00:00 WIB+0700  实验2 In [146]: now = int(time.</description>
+    </item>
+    
+  </channel>
+</rss>

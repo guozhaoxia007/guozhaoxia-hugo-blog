@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on 喵大人的博客</title>
+    <link>http://guozhaoxia007.github.io/categories/hugo/</link>
+    <description>Recent content in Hugo on 喵大人的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 22 Feb 2016 19:21:24 +0800</lastBuildDate>
+    
+	<atom:link href="http://guozhaoxia007.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hugo</title>
+      <link>http://guozhaoxia007.github.io/post/2016/02/hugo/</link>
+      <pubDate>Mon, 22 Feb 2016 19:21:24 +0800</pubDate>
+      
+      <guid>http://guozhaoxia007.github.io/post/2016/02/hugo/</guid>
+      <description>启动本地server  hugo server -t hugo-base16-theme
+ 生成静态文件到public, baseUrl可以在.git中配置  hugo -t hugo-base16-theme &amp;ndash;baseUrl=&amp;ldquo;http://guozhaoxia007.github.io&amp;quot;</description>
+    </item>
+    
+  </channel>
+</rss>
