@@ -67,17 +67,17 @@ canonifyurls = true
   # bilibili = "bilibili_id_number"
 
   # Changyan Comments (China Only)
-  changyan = false
-  changyanId = "cyt3toRiB"
-  changyanConf = "prod_0908b1cb9a581501753cce1ed074dbe3"
+  changyan = true
+  changyanId = "cytsuhDns"
+  changyanConf = "prod_2ed8389aa7aba905dc76e2051c5aa7ee"
 
   # Google Webmaster
   # https://www.google.com/webmasters/
-  googleSiteVerification = "_moDmnnBNVLBN1rzNxyGUGdPHE20YgbmrtzLIbxaWFc"
+  googleSiteVerification = ""
 
   # Bing Webmaster
   # https://www.bing.com/toolbox/webmaster/
-  msValidate = "22596E34341DD1D17D6022C44647E587"
+  msValidate = ""
 
   # Baidu Webmaster (China Only)
   # https://zhanzhang.baidu.com/

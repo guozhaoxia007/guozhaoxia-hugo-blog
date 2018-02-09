@@ -5,11 +5,17 @@ categories:
     - hugo
 
 ---
+
+- 添加文件
+
+hugo new post/2016/02/new.md
+
+
 - 启动本地server
 
-hugo server -t hugo-base16-theme 
+hugo server -w
+
 
 - 生成静态文件到public, baseUrl可以在.git中配置
 
-hugo -t hugo-base16-theme --baseUrl="http://guozhaoxia007.github.io"
-
+hugo -t hugo-nuo
